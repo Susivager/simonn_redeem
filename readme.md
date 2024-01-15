@@ -25,7 +25,7 @@
       cash = 2000
   },
 
-´´´
+
 
 ## Benachrichtigungen
 
@@ -82,9 +82,9 @@ Nach der Installation können Spieler den im Config.RedeemCommand festgelegten B
   ['CODE2'] = {
       cash = 2000
   },
-´´´
 
-# Notifications
+
+## Notifications
 
 The configuration file (Config.lua) provides various custom functions that execute during specific events. Here are the available functions:
 
