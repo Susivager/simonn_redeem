@@ -1,3 +1,4 @@
+
 # SIMONN Scipts REDEEM
 
 ## Konfiguration (Config.lua)
@@ -9,7 +10,7 @@
 - **Config.RedeemCommand**: Definiert den Befehl, mit dem Spieler einen Code einlösen können. Standard: 'redeem'.
 
 ### Liste der Codes
-- **Config.RedeemCodes**: Hier kannst du die Codes festlegen, die im Spiel eingelöst werden können. Jeder Code hat verschiedene Belohnungen wie Bargeld, Bankgeld und Gegenstände.
+- **Config.RedeemCodes**: Hier kannst du die Codes festlegen, die im Spiel eingelöst werden können. Jeder Code hat verschiedene Belohnungen wie Bargeld (cash), Bankguthaben (bank) und Items.
 
   Beispiel:
   ```lua
@@ -46,9 +47,12 @@ Die Konfigurationsdatei (Config.lua) bietet verschiedene benutzerdefinierte Funk
 
 Spieler können den definierten RedeemCommand verwenden, um Codes einzulösen. Hier sind die Schritte:
 
-1. **Lade das Script in deinen Server.**
-2. **Passe die Konfiguration in Config.lua an deine Bedürfnisse an.**
-3. **Starte deinen Server.**
+1. **Lade zuerst den Ordner "simonn_redeem" auf deinen Server hoch.**
+2. **Bearbeite dann die Datei "config/config.lua" nach deinen Wünschen.**
+3. **Füge das Skript zur "server.cfg"-Datei hinzu, indem du "ensure simonn_redeem" einträgst.**
+4.  **Führe schließlich das SQL-Skript "config/sql.sql" aus.** 
+5. **Fertig**
+   
 
 Nach der Installation können Spieler den im Config.RedeemCommand festgelegten Befehl verwenden, um Codes einzulösen. Du kannst diese Funktionen nach deinen Wünschen anpassen, zum Beispiel individuelle Benachrichtigungen im Spiel anzeigen.
 
@@ -67,7 +71,7 @@ Nach der Installation können Spieler den im Config.RedeemCommand festgelegten B
 - **Config.RedeemCommand**: Defines the command for players to redeem a code. Default: 'redeem'.
 
 ### List of Codes
-- **Config.RedeemCodes**: Here, you can set the codes that players can redeem in the game. Each code has various rewards such as cash, bank money, and items.
+- **Config.RedeemCodes**: Here, you can set the codes that players can redeem in the game. Each code has various rewards such as cash (cash), bank money (bank), and items.
 
   Example:
   ```lua
@@ -88,36 +92,40 @@ Nach der Installation können Spieler den im Config.RedeemCommand festgelegten B
 
 The configuration file (Config.lua) provides various custom functions that execute during specific events. Here are the available functions:
 
-  ```lua
-  -- Executes when a player successfully redeems a code. By default, displays a notification in the game.
-  Config.SuccessNotify = function(player)
-      -- Customization can be done here
-  end
-  
-  -- Executes when a player uses an invalid code. By default, displays a corresponding notification in the game.
-  Config.CodeError = function(player)
-      -- Customization can be done here
-  end
-  
-  -- Executes when a player incorrectly uses the command to redeem a code. By default, displays a helpful notification for the correct command usage.
-  Config.CommandError = function(player)
-      -- Customization can be done here
-  end
-  
-  -- Executes when a player attempts to use a code that has already been redeemed. By default, displays a notification in the game.
-  Config.AlreadyRedeemedError = function(player)
-      -- Customization can be done here
-  end
+ 
+
+      -- Executes when a player successfully redeems a code. By default, displays a notification in the game.
+      Config.SuccessNotify = function(player)
+          -- Customization can be done here
+      end
+      
+      -- Executes when a player uses an invalid code. By default, displays a corresponding notification in the game.
+      Config.CodeError = function(player)
+          -- Customization can be done here
+      end
+      
+      -- Executes when a player incorrectly uses the command to redeem a code. By default, displays a helpful notification for the correct command usage.
+      Config.CommandError = function(player)
+          -- Customization can be done here
+      end
+      
+      -- Executes when a player attempts to use a code that has already been redeemed. By default, displays a notification in the game.
+      Config.AlreadyRedeemedError = function(player)
+          -- Customization can be done here
+      end
 
 ## Usage
 
 Players can use the defined RedeemCommand to redeem codes. Here are the steps:
 
-1. **Load the script into your server.**
-2. **Adjust the configuration in Config.lua to your needs.**
-3. **Start your server.**
+1. **First, upload the folder "simonn_redeem" to your server.**
+2. **Then, edit the file "config/config.lua" according to your preferences.**
+3. **Add the script to the "server.cfg" file by including "ensure simonn_redeem".**
+4. **Finally, execute the SQL script "config/sql.sql".**
+5. **Done.**
 
 After installation, players can use the command set in Config.RedeemCommand to redeem codes. You can customize these functions to show individual in-game notifications, for example.
 
 **Note:** Be sure to carefully adjust the configuration to ensure the script works according to your requirements.
+
 
