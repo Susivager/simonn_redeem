@@ -88,35 +88,36 @@ Nach der Installation können Spieler den im Config.RedeemCommand festgelegten B
 
 The configuration file (Config.lua) provides various custom functions that execute during specific events. Here are the available functions:
 
-```lua
--- Executes when a player successfully redeems a code. By default, displays a notification in the game.
-Config.SuccessNotify = function(player)
-    -- Customization can be done here
-end
+  ```lua
+  -- Executes when a player successfully redeems a code. By default, displays a notification in the game.
+  Config.SuccessNotify = function(player)
+      -- Customization can be done here
+  end
+  
+  -- Executes when a player uses an invalid code. By default, displays a corresponding notification in the game.
+  Config.CodeError = function(player)
+      -- Customization can be done here
+  end
+  
+  -- Executes when a player incorrectly uses the command to redeem a code. By default, displays a helpful notification for the correct command usage.
+  Config.CommandError = function(player)
+      -- Customization can be done here
+  end
+  
+  -- Executes when a player attempts to use a code that has already been redeemed. By default, displays a notification in the game.
+  Config.AlreadyRedeemedError = function(player)
+      -- Customization can be done here
+  end
 
--- Executes when a player uses an invalid code. By default, displays a corresponding notification in the game.
-Config.CodeError = function(player)
-    -- Customization can be done here
-end
-
--- Executes when a player incorrectly uses the command to redeem a code. By default, displays a helpful notification for the correct command usage.
-Config.CommandError = function(player)
-    -- Customization can be done here
-end
-
--- Executes when a player attempts to use a code that has already been redeemed. By default, displays a notification in the game.
-Config.AlreadyRedeemedError = function(player)
-    -- Customization can be done here
-end
-´´´
-# Usage
+## Usage
 
 Players can use the defined RedeemCommand to redeem codes. Here are the steps:
 
-1. Load the script into your server.
-2. Adjust the configuration in Config.lua to your needs.
-3. Start your server.
+1. **Load the script into your server.**
+2. **Adjust the configuration in Config.lua to your needs.**
+3. **Start your server.**
 
 After installation, players can use the command set in Config.RedeemCommand to redeem codes. You can customize these functions to show individual in-game notifications, for example.
 
 **Note:** Be sure to carefully adjust the configuration to ensure the script works according to your requirements.
+
