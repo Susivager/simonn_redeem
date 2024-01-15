@@ -108,7 +108,7 @@ end
 Config.AlreadyRedeemedError = function(player)
     -- Customization can be done here
 end
-
+´´´
 # Usage
 
 Players can use the defined RedeemCommand to redeem codes. Here are the steps:
