@@ -140,11 +140,13 @@ Players can use the defined RedeemCommand to redeem codes. Here are the steps:
 3. **Add the script to the "server.cfg" file by including "ensure simonn_redeem".**
 4. **Finally, execute the SQL script "config/sql.sql".**
 
-    CREATE  TABLE  IF  NOT  EXISTS simonn_redeemedcodes (
-        identifier VARCHAR(255) NOT NULL,
-       code VARCHAR(255) NOT NULL,
-        PRIMARY KEY (identifier, code)
-    );
+        CREATE  TABLE  IF  NOT  EXISTS simonn_redeemedcodes (
+	        identifier VARCHAR(255) NOT NULL,
+	        code VARCHAR(255) NOT NULL,
+	        PRIMARY KEY (identifier, code)
+	    );
+
+
 
 6. **Done.**
 
