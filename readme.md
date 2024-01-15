@@ -1,5 +1,8 @@
 
 # SIMONN Scipts REDEEM
+
+Support on Discord: si.mon8051
+
 **SIMONN REDEEM** ist ein einfaches FiveM-Script, bei dem Spieler durch die Verwendung eines Befehls wie /redeem Ingame-Geld oder Gegenstände erhalten können. Sobald ein Code verwendet wurde, wird dies in der Datenbank gespeichert. Dadurch können die Spieler die Codes nur einmal verwenden.
 
 ### Dependencies
