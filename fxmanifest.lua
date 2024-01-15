@@ -9,6 +9,5 @@ description 'Ein simples Redeem-Script / A simple redeem script'
 server_scripts {
     '@oxmysql/lib/MySQL.lua',
     'config/config.lua',
-    'config/webhooks.lua',
     'server/server.lua',
 }
