@@ -1,10 +1,15 @@
 
 # SIMONN Scipts REDEEM
+**SIMONN REDEEM** ist ein einfaches FiveM-Script, bei dem Spieler durch die Verwendung eines Befehls wie /redeem Ingame-Geld oder Gegenstände erhalten können. Sobald ein Code verwendet wurde, wird dies in der Datenbank gespeichert. Dadurch können die Spieler die Codes nur einmal verwenden.
 
+### Dependencies
+- **ESX**
+- **oxymysql**
 ## Konfiguration (Config.lua)
 
-### Framework (ESX oder anderes)
+### Framework (ESX)
 - **Config.Framework**: Hier wird das Framework für das Script festgelegt. Aktuell unterstützt: 'ESX'.
+
 
 ### Redeem-Befehl
 - **Config.RedeemCommand**: Definiert den Befehl, mit dem Spieler einen Code einlösen können. Standard: 'redeem'.
@@ -51,7 +56,14 @@ Spieler können den definierten RedeemCommand verwenden, um Codes einzulösen. H
 2. **Bearbeite dann die Datei "config/config.lua" nach deinen Wünschen.**
 3. **Füge das Skript zur "server.cfg"-Datei hinzu, indem du "ensure simonn_redeem" einträgst.**
 4.  **Führe schließlich das SQL-Skript "config/sql.sql" aus.** 
-5. **Fertig**
+
+        CREATE  TABLE  IF  NOT  EXISTS simonn_redeemedcodes (
+	        identifier VARCHAR(255) NOT NULL,
+	        code VARCHAR(255) NOT NULL,
+	        PRIMARY KEY (identifier, code)
+	    );
+
+6. **Fertig**
    
 
 Nach der Installation können Spieler den im Config.RedeemCommand festgelegten Befehl verwenden, um Codes einzulösen. Du kannst diese Funktionen nach deinen Wünschen anpassen, zum Beispiel individuelle Benachrichtigungen im Spiel anzeigen.
@@ -61,6 +73,11 @@ Nach der Installation können Spieler den im Config.RedeemCommand festgelegten B
 
 
 # SIMONN Scipts REDEEM
+**SIMONN REDEEM** is a simple FiveM script where players can receive in-game currency or items by using a command such as /redeem. Once a code has been used, it is stored in the database, preventing players from using the same codes more than once.
+
+### Dependencies
+- **ESX**
+- **oxymysql**
 
 ## Configuration (Config.lua)
 
@@ -122,7 +139,14 @@ Players can use the defined RedeemCommand to redeem codes. Here are the steps:
 2. **Then, edit the file "config/config.lua" according to your preferences.**
 3. **Add the script to the "server.cfg" file by including "ensure simonn_redeem".**
 4. **Finally, execute the SQL script "config/sql.sql".**
-5. **Done.**
+
+    CREATE  TABLE  IF  NOT  EXISTS simonn_redeemedcodes (
+        identifier VARCHAR(255) NOT NULL,
+       code VARCHAR(255) NOT NULL,
+        PRIMARY KEY (identifier, code)
+    );
+
+6. **Done.**
 
 After installation, players can use the command set in Config.RedeemCommand to redeem codes. You can customize these functions to show individual in-game notifications, for example.
 
