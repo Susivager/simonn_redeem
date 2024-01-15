@@ -25,6 +25,8 @@
       cash = 2000
   },
 
+```
+
 ## Benachrichtigungen
 
 Die Konfigurationsdatei (Config.lua) bietet verschiedene benutzerdefinierte Funktionen, die bei bestimmten Ereignissen ausgeführt werden. Hier sind die verfügbaren Funktionen:
